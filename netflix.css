@@ -1,3 +1,4 @@
+/*--Netflix webpage using HTML and CSS by Bajulaiye Wadidah--*/
 *{
     margin: 0;
     padding: 0;
@@ -97,6 +98,7 @@ button:hover{
     background-color: rgba(226,0,0,0.7);
     transition: 1s;
 }
+/*-------Enjoy on TV------*/
 .tv{
     background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),;
     background-size: cover;
@@ -138,6 +140,7 @@ button:hover{
     text-align: left;
     justify-content: left;
     position: left;
+    font-family: 'Times New Roman', Times, serif;
 }
 .tv p{
     font-size: 24px;
@@ -145,7 +148,9 @@ button:hover{
     margin-bottom: 20px;
     text-align: left;
     justify-content: left;
+    font-family: cursive;
 }
+/*-----Download your shows to watch offline-----*/
 .shows{
     background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),;
     background-size: cover;
@@ -162,12 +167,10 @@ button:hover{
     align-items: center;
     flex-wrap: wrap;
 }
-
 .shows-text{
     flex-basis: 50%;
     margin-bottom: 20px;
 }
-
 .shows-text h1{
     font-size: 42px;
     color: #fff;
@@ -176,7 +179,6 @@ button:hover{
     position: relative;
     font-family: 'Times New Roman', Times, serif;
 }
-
 .shows-text p{
     font-size: 24px;
     color: #fff;
@@ -187,7 +189,6 @@ button:hover{
     justify-content: right;
     font-family: cursive;
 }
-
 .img-show{
     flex-basis: 50%;
     margin-bottom: 20px;
@@ -195,6 +196,13 @@ button:hover{
     height: 500px;
     width: 300px;
 }
+/*-----Styling the <hr>(Horizontal rule) to show the different sections of the webpage-----*/
+hr{
+    border: none;
+    border-top: 10px solid #777;
+    margin: 20px 0;
+}
+/*-----Watch everywhere-----*/
 .watch{
     background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),;
     background-size: cover;
@@ -211,12 +219,10 @@ button:hover{
     align-items: center;
     flex-wrap: wrap;
 }
-
 .watch-text{
     flex-basis: 50%;
     margin-bottom: 20px;
 }
-
 .watch-text h1{
     font-size: 42px;
     color: #fff;
@@ -225,7 +231,6 @@ button:hover{
     position: relative;
     font-family: 'Times New Roman', Times, serif;
 }
-
 .watch-text p{
     font-size: 24px;
     color: #fff;
@@ -236,7 +241,6 @@ button:hover{
     justify-content: right;
     font-family: cursive;
 }
-
 .img-watch{
     flex-basis: 50%;
     margin-bottom: 20px;
@@ -244,6 +248,7 @@ button:hover{
     height: 500px;
     width: 300px;
 }
+/*-----Kids Profile-----*/
 .kids{
     background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),;
     background-size: cover;
@@ -285,7 +290,6 @@ button:hover{
     justify-content: right;
     font-family: cursive;
 }
-
 .img-kids{
     flex-basis: 60%;
     margin-bottom: 20px;
@@ -293,6 +297,7 @@ button:hover{
     height: 500px;
     width: 300px;
 }
+/*-----Frequently Asked Questions-----*/
 .questions{
     padding: 10px 12%;
     text-align: center;
@@ -300,17 +305,103 @@ button:hover{
 }
 .questions h1{
     font-weight: 500;
-    font-size: 40px;
+    font-size: 62px;
 }
 .accordion{
     margin: 60px auto;
     width: 100%;
-
+    /*max-width: 750px;*/
 }
-.break{
-    margin: 100px;
-    color: red;
+.accordion li{
+    list-style: none;
+    width: 100%;
+    padding: 5px;
 }
-
-
-
+.accordion li label{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 28px;
+    font-weight: 500;
+    background: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+li label::after{
+    content: '+';
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s;
+}
+input[type="radio"]{
+    display: none;
+}
+.accordion .content{
+    background: #303030;
+    text-align: left;
+    padding: 0 20px;
+    font-size: 24px;
+    max-height: 0;
+    overflow: hidden;
+}
+.accordion input[type="radio"]:checked + label + .content{
+    max-height: 600px;
+    padding: 30px 20px;
+}
+.accordion input[type="radio"]:checked + label::after{
+    transform: rotate(135deg);
+    overflow: hidden;
+}
+.questions .email{
+    max-width: 600px;
+    margin: 20px auto 60px; 
+}
+.questions small{
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/*--------footer-------------*/
+.footer{
+    padding: 50px 15% 10px;
+    border-top: 6px solid #333;
+    color: #777;
+}
+.footer a{
+    margin-bottom: 30px;
+    color: #777;
+}
+.footer .col{
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+.footer .col a{
+    display: block;
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.footer .row{
+    align-items: flex-start;
+    padding: 10px 0;
+}
+.footer .language-btn{
+    background-color: #333;
+    color: #f2f2f2;
+    border: none;
+    text-align: left;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 3px;
+}
+.footer .language-btn img{
+    width: 10px;
+    margin-left: 0.5px;
+}
+.copyright-txt{
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
